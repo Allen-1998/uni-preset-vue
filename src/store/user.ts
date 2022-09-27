@@ -1,24 +1,23 @@
-import { defineStore } from "pinia"
+import { defineStore } from "pinia";
 
-export const userStore =  defineStore({
-  id: 'user',
+export const userStore = defineStore({
+  id: "user",
   persist: {
-    // 开启持久化
     enabled: true,
   },
   state: () => {
     return {
-      name: '张三',
-    }
+      name: "allen",
+    };
   },
   getters: {
     fullName: (state) => {
-      return state.name + '丰'
+      return state.name + "_1998";
     },
   },
   actions: {
     updateName(name: string) {
-      this.name = name
+      this.name = name;
     },
   },
-})
+});
